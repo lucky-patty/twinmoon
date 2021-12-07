@@ -33,8 +33,8 @@
 .main {
   color: $title;
   font-family: $font;
-  font-weight: 500;
-  font-size: 150px;
+  font-weight: $fontTitleWeight;
+  font-size: $fontTitleSize;
 }
 .header {
   color: $subTitle;
@@ -43,8 +43,8 @@
 .subtitle {
   color: $subTitle;
   font-family: $font;
-  font-weight: 500;
-  font-size: 40px;
+  font-weight: $fontSubTitleWeight;
+  font-size: $fontSubTitleSize;
 }
 .twinmoon-img {
   max-width: 100%;

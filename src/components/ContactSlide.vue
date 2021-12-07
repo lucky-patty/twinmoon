@@ -1,18 +1,19 @@
 <template>
-    <div>
+    <div class="bg-black">
         <!-- Content -->
-        <div class="testContainer row wrap items-center justify-center q-mt-xl q-px-xl q-pm-xl">
+        <div class="testContainer row wrap items-center justify-center q-mt-xl q-px-xl ">
           <!-- Left Side -->
           <div class="col-8 q-pt-xl">
             <!-- Whole Container -->
             <div class="column wrap">
               <!-- Title -->
               <div class="col-12 main">
-                  Twinmoon <br> Studio
+                  Contact Us <br>
               </div>
               <!-- Subtitle -->
-              <div class="col-12 subtitle q-mt-md q-pl-sm">
-                Digital Product Studio
+              <div class="col-12 subtitle q-mt-md q-pl-md">
+                If you interest in building product don't hesistate
+                <br> and reach out to us ! <br> <br> contact@twinmoon.studio
               </div>
             </div>
           </div>
@@ -57,7 +58,7 @@
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
-  name: 'ProjectSlide',
+  name: 'ContactSlide',
   setup() {
     const slide = ref('main');
     return { slide };

@@ -24,6 +24,7 @@
       </q-carousel-slide>
       <!-- Contact Us -->
       <q-carousel-slide name="contact" class="background">
+        <contact-slide />
       </q-carousel-slide>
     </q-carousel>
     </div>
@@ -66,10 +67,11 @@
 import { defineComponent, ref } from 'vue';
 import HomeSlide from 'components/HomeSlide.vue';
 import ProjectSlide from 'components/ProjectSlide.vue';
+import ContactSlide from 'components/ContactSlide.vue';
 
 export default defineComponent({
   name: 'PageIndex',
-  components: { HomeSlide, ProjectSlide },
+  components: { HomeSlide, ProjectSlide, ContactSlide },
   setup() {
     const slide = ref('main');
     return { slide };
