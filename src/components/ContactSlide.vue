@@ -1,19 +1,27 @@
 <template>
-    <div class="bg-black">
+<div>
         <!-- Content -->
-        <div class="testContainer row wrap items-center justify-center q-mt-xl q-px-xl ">
+        <div class="testContainer row wrap items-center justify-center q-mt-xl q-px-xl q-pm-xl">
           <!-- Left Side -->
           <div class="col-8 q-pt-xl">
             <!-- Whole Container -->
-            <div class="column wrap">
+            <div class="column fit wrap justify-between items-start">
               <!-- Title -->
               <div class="col-12 main">
-                  Contact Us <br>
+                  Contact Us<br>
               </div>
-              <!-- Subtitle -->
-              <div class="col-12 subtitle q-mt-md q-pl-md">
-                If you interest in building product don't hesistate
-                <br> and reach out to us ! <br> <br> contact@twinmoon.studio
+              <!-- Description -->
+              <div class="col-10 subtitle q-mt-md q-pl-sm">
+                <!-- If you interest in building digital project don't hesitate
+                and reach out to us! -->
+                We are a group of people who love to chase after their dream.
+                If you've got a project in mind, why not get in touch.
+                Let's work together !
+              </div>
+              <!-- Icon -->
+              <div class="col-12 subtitle q-mt-xl q-pl-sm">
+                  Contact@twinmoon.studio
+                  <div class="row wrap items-start "></div>
               </div>
             </div>
           </div>

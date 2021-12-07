@@ -5,14 +5,21 @@
           <!-- Left Side -->
           <div class="col-8 q-pt-xl">
             <!-- Whole Container -->
-            <div class="column wrap">
+            <div class="column fit wrap justify-between items-start">
               <!-- Title -->
               <div class="col-12 main">
-                  Twinmoon <br> Studio
+                  Drunkdude<br>
               </div>
-              <!-- Subtitle -->
+              <!-- Description -->
               <div class="col-12 subtitle q-mt-md q-pl-sm">
-                Digital Product Studio
+                Alcohol e-commerce platform that allows
+                users to purchase goods using crypto currency.
+                We are now operate in South East Asia region.
+              </div>
+              <!-- Icon -->
+              <div class="col-12 subtitle q-mt-md q-pl-sm">
+                  Digital Product Studio
+                  <div class="row wrap items-start "></div>
               </div>
             </div>
           </div>
