@@ -19,7 +19,7 @@
               </div>
               <!-- Icon -->
               <div class="col-12 subtitle q-mt-xl q-pl-sm">
-                <div class="row wrap items-center justify-start">
+                <div class="row wrap items-center justify-start q-mt-xl">
                     <div class="small-logo-container q-mr-xl">
                         <q-img
                         fit="fill"
@@ -122,6 +122,11 @@
   max-height: 100%;
 }
 .small-logo-container{
+  height: 100%;
+  width: 75px;
+  opacity: 40%;
+}
+.small-logo-selected {
   height: 100%;
   width: 75px;
 }
