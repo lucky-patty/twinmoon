@@ -17,7 +17,7 @@
             </div>
           </div>
           <!-- Logo -->
-          <div class="col-4">
+          <div class="col-4 q-px-xl">
             <!-- Image Container -->
             <div class="twinmoon-logo-container">
               <q-img fit="cover" class="twinmoon-img" src="../assets/twinmoon.svg" />
