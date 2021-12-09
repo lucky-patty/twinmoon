@@ -5,3 +5,24 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>;
   export default component;
 }
+
+// Test add declare
+declare module '*.svg' {
+  import type { DefineComponent } from 'vue';
+  const component: DefineComponent<{},{},any>;
+  export default component;
+}
+
+// Test add declare
+declare module '*.png' {
+  import type { DefineComponent } from 'vue';
+  const component: DefineComponent<{},{},any>;
+  export default component;
+}
+
+// Add Jpg
+declare module '*.jpg' {
+  import type { DefineComponent } from 'vue';
+  const component: DefineComponent<{},{},any>;
+  export default component;
+}

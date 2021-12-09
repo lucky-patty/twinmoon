@@ -3,7 +3,7 @@
         <!-- Content -->
         <div class="testContainer row wrap items-center justify-center q-mt-xl q-px-xl ">
           <!-- Left Side -->
-          <div class="col-8 q-pt-xl">
+          <div class="col-md-8 col-sm-12 q-pt-xl">
             <!-- Whole Container -->
             <div class="column wrap">
               <!-- Title -->
@@ -17,7 +17,7 @@
             </div>
           </div>
           <!-- Logo -->
-          <div class="col-4 q-px-xl">
+          <div class="col-md-4 mobile-hide q-px-xl">
             <!-- Image Container -->
             <div class="twinmoon-logo-container">
               <q-img fit="cover" class="twinmoon-img" src="../assets/twinmoon.svg" />

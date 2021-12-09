@@ -12,7 +12,7 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#configuration
     // https://github.com/TypeStrong/fork-ts-checker-webpack-plugin#eslint
     // Needed to make the parser take into account 'vue' files
-    extraFileExtensions: ['.vue'],
+    extraFileExtensions: ['.vue','.svg'],
     parser: '@typescript-eslint/parser',
     project: resolve(__dirname, './tsconfig.json'),
     tsconfigRootDir: __dirname,
@@ -85,6 +85,9 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
     'prefer-promise-reject-errors': 'off',
+    'max-len': 'off',
+    'no-tabs': 'off',
+    'vue/comment-directive': 'off',
 
     // TypeScript
     quotes: ['warn', 'single', { avoidEscape: true }],

@@ -4,48 +4,47 @@
         <!-- Content -->
         <div class="testContainer row wrap items-center justify-center q-mt-xl q-px-xl q-pm-xl">
           <!-- Left Side -->
-          <div class="col-8 q-pt-xl">
+          <div class="col-md-8 col-sm-12 q-pt-xl">
             <!-- Whole Container -->
             <div class="column fit wrap justify-between items-start">
               <!-- Title -->
               <div class="col-12 main">
-                  Drunkdude<br>
+                  {{title}}<br>
               </div>
               <!-- Description -->
               <div class="col-12 subtitle q-mt-md q-pl-sm">
-                Alcohol e-commerce platform that allows
-                users to purchase goods using crypto currency.
-                We are now operate in South East Asia region.
+                {{info}}
               </div>
               <!-- Icon -->
               <div class="col-12 subtitle q-mt-xl q-pl-sm">
                 <div class="row wrap items-center justify-start q-mt-xl">
-                    <div class="small-logo-container q-mr-xl">
+                    <div class="small-logo-container q-mr-xl"
+                    @click="changeItem(0)">
                         <q-img
                         fit="fill"
-                        class="small-imag"
                         ratio="1"
                         src="../assets/bb-logo-white.svg"/>
                     </div>
-                    <div class="small-logo-container q-mr-xl">
+                    <div class="small-logo-container q-mr-xl"
+                        @click="changeItem(1)">
                         <q-img
                         fit="fill"
-                        class="small-imag"
                         ratio="1"
                         src="../assets/dd-logo-small-white.svg"/>
                     </div>
-                    <div class="small-logo-container q-mr-xl">
+                    <div class="small-logo-container q-mr-xl"
+                        @click="changeItem(2)">
                         <q-img
                         fit="fill"
-                        class="small-imag"
                         ratio="1"
                         src="../assets/fika-logo-white.svg"/>
                     </div>
-                    <div class="small-logo-container q-mr-xl">
+                    <div class="small-logo-container q-mr-xl"
+                        @click="changeItem(3)">
                         <q-img
                         fit="fill"
-                        class="small-imag"
                         ratio="1"
+                        @click="changeItem(3)"
                         src="../assets/gachii-logo-white.svg"/>
                     </div>
                     <!-- <div class="small-logo-container q-mr-xl">
@@ -59,7 +58,7 @@
             </div>
           </div>
           <!-- Logo -->
-          <div class="col-4 q-px-xl">
+          <div class="col-md-4 mobile-hide q-px-xl">
             <!-- Image Container -->
             <div class="twinmoon-logo-container">
               <!-- <q-img fit="cover" class="twinmoon-img" src="../assets/bb-logo-blue.svg" /> -->
@@ -68,7 +67,8 @@
               class="twinmoon-img" src="../assets/fika-logo-white.svg" /> -->
               <!-- <q-img fit="cover"
               class="twinmoon-img" src="../assets/gachii-logo-normal.svg" /> -->
-              <q-icon class="custom" name="img:project-logo/fika-logo-white.svg" />
+              <q-img fit="cover" class="twinmoon-img" :src="image" />
+              <!-- <q-icon class="custom" name="img:project-logo/fika-logo-white.svg" /> -->
               <!-- <q-icon class="custom">
                 <svg xmlns="http://www.w3.org/2000/svg" width="88.736" height="47.703" viewBox="0 0 88.736 47.703">
                 <g id="Group_2008" data-name="Group 2008" transform="translate(0 -0.001)">
@@ -97,6 +97,9 @@
 //   width: 400px;
   font-size: 20rem;
 }
+.dim-container {
+  opacity: 40%;
+}
 .main {
   color: $title;
   font-family: $font;
@@ -124,7 +127,6 @@
 .small-logo-container{
   height: 100%;
   width: 75px;
-  opacity: 40%;
 }
 .small-logo-selected {
   height: 100%;
@@ -134,8 +136,34 @@
 </style>
 
 <script lang="ts">
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { defineComponent, ref } from 'vue';
+import bb from 'assets/bb-logo-blue.svg';
+// import bb from '../assets/bb-logo-blue.svg';
+import dd from '../assets/dd-logo-big.svg';
+import fika from '../assets/fika-logo-white.svg';
+import gachii from '../assets/gachii-logo-normal.svg';
 
+const allTitle = [
+  'Baitbuy',
+  'Drunkdude',
+  'Fika',
+  'Gachii',
+];
+
+const allImages = [
+  bb,
+  dd,
+  fika,
+  gachii,
+];
+
+const allInfo = [
+  'Product Review platform that rewards cryptocurrency as reward. We also offer insights to business owner',
+  'Alcohol e-commerce platform that allows users to purchase goods using crypto currency. We are now operate in South East Asia region. ',
+  'Local goods e-commerce platform which use cryptocurrency. We operate mainly in South East Asia region',
+  'Gashapon crypto platform for artists who sell toys and other collectable items',
+];
 const allProject = [
   {
     title: 'Drunkdude',
@@ -147,9 +175,34 @@ const allProject = [
 
 export default defineComponent({
   name: 'ProjectSlide',
+  data() {
+    return {
+      title: ref(allTitle[0]),
+      info: ref(allInfo[0]),
+      image: ref(allImages[0]),
+    };
+  },
   setup() {
     const slide = ref('main');
-    return { slide, allProject };
+    // const title = ref(allTitle[0]);
+    // const info = ref(allInfo[0]);
+    // const image = ref(allImages[0]);
+    return {
+      slide,
+      allProject,
+    //   title,
+    //   info,
+    //   image,
+    };
+  },
+  methods: {
+    changeItem(index: number) {
+      if (index <= this.title.length - 1) {
+        this.title = allTitle[index];
+        this.info = allInfo[index];
+        this.image = allImages[index];
+      }
+    },
   },
 });
 </script>
